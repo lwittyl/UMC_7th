@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layout/root-layout.jsx";
-import HomePage from "./pages/HomePage.jsx";
+import Movies from "./pages/Movies.jsx";
 import Login from "./pages/Login.jsx"
 import SignUp from "./pages/SignUp.jsx";
 import Search from "./pages/Search.jsx";
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage url={'popular'}/>
+        element: <Movies url={'popular'}/>
       },
       {
         path: '/login',
@@ -33,19 +33,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/movies/popular',
-        element: <HomePage url={'popular'}/>
+        element: <Movies url={'popular'}/>
       },
       {
         path: '/movies/now-playing',
-        element: <HomePage url={'now_playing'}/>
+        element: <Movies url={'now_playing'}/>
       },
       {
         path: '/movies/top-rated',
-        element: <HomePage url={'top_rated'}/>
+        element: <Movies url={'top_rated'}/>
       },
       {
         path: '/movies/up-coming',
-        element: <HomePage url={'upcoming'}/>
+        element: <Movies url={'upcoming'}/>
       }
     ]
   }
