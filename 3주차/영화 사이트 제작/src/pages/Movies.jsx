@@ -7,7 +7,7 @@ const HomePage = (props) =>{
     const [movies, setMovies] = useState([]);
     useEffect(()=>{
         const getMovies = async () =>{
-            const movies = await axios.get('https://api.themoviedb.org/3/movie/'+props.url+'?language=en-US&page=1', {
+            const movies = await axios.get('https://api.themoviedb.org/3/movie/'+props.url+'?language=ko-KR&page=1', {
                 headers:{
                     Authorization:`Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ODljOGNmMDY3MjQ2Y2E5ZDg0YzA5ZmNmZWQxMzM3OCIsIm5iZiI6MTcyODQ2MzE2OS4zNTY0MjgsInN1YiI6IjY3MDYzYzExYTg4NjE0ZDZiMDhhZDg1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DngosLkhpQATrigOihV_O0kF27JN_FwToRFpkn2JlQ4`,
                 }
