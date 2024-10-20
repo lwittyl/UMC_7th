@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp.jsx";
 import Search from "./pages/Search.jsx";
 import '../src/App.css';
 import MoviePage from "./pages/MoviePage.jsx";
+import MovieDetail from "./pages/MovieDetail.jsx";
 const router = createBrowserRouter([
   {
     path:'/',
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: '/movies/up-coming',
         element: <Movies url={'upcoming'}/>
+      },
+      {
+        path: '/movies/:movieId',
+        element: <MovieDetail/>
       }
     ]
   }

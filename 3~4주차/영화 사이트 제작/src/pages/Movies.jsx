@@ -21,7 +21,7 @@ const HomePage = (props) =>{
         {
           movies.data?.results?.map((item, index)=>{
             return(
-              <Movie key={item.id} route={item.poster_path}  name={item.title} date={item.release_date}/>
+              <Movie key={index} id={item.id} route={item.poster_path}  name={item.title} date={item.release_date}/>
             )
           })
         }

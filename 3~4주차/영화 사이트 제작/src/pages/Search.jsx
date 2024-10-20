@@ -8,6 +8,7 @@ const Search= () =>{
 export default Search;
 
 const SearchStyle = styled.div`
+    height: 100vh;
     width: 90%;
     padding: 1rem 2rem;
     color:white;

@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 export default function Movie(props) {
+    const navigate = useNavigate();
     let baseUrl = 'https://image.tmdb.org/t/p/w500';
     
     const [isHovered, setIsHovered] = useState(false);
+    const handleClick = () => {
+        navigate(`/movies/${props.id}`);
+    };
 
     return (
-        <Container>
+        <Container onClick={handleClick}>
             <MovieContainer
                 onMouseOver={() => setIsHovered(true)}
                 onMouseOut={() => setIsHovered(false)}
@@ -20,6 +25,7 @@ export default function Movie(props) {
         </Container>
     );
 }
+
 const MovieContainer = styled.div`
     position: relative;
 `
