@@ -12,12 +12,12 @@ export default function Movie(props) {
     };
 
     return (
-        <Container onClick={handleClick}>
+        <Container onClick={handleClick} isHovered={isHovered}>
             <MovieContainer
                 onMouseOver={() => setIsHovered(true)}
                 onMouseOut={() => setIsHovered(false)}
             >
-                <MovieContainerImg src={baseUrl + props.route} alt="Movie Poster" />
+                <MovieContainerImg src={baseUrl + props.route} alt="Movie Poster"/>
                 {isHovered && <Mouse/>}
             </MovieContainer>
             <h4 style={{color: 'white'}}>{props.name}</h4>
@@ -49,6 +49,7 @@ const Container = styled.div`
     flex-direction:column;
     margin: 1rem;
     color: white;
+    transform: ${({ isHovered }) => (isHovered ? 'scale(1.05)' : 'scale(1)')};
 `
 const InnerText = styled.div`
     font-weight: light;

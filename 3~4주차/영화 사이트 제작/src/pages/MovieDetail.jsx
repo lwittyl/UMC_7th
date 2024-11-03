@@ -4,7 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 
 const MovieDetail = () => {
-  const { movieId } = useParams(); // useParams로 movieId 가져오기
+  const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [credits, setCredits] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -99,7 +99,7 @@ const Hr = styled.hr`
   margin: 0;
 `
 const HeaderContainer = styled.div`
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), url(${props => props.backdropUrl});;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${props => props.backdropUrl});;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -143,6 +143,9 @@ const CastImage = styled.img`
 
 const Loading = styled.div`
   color: white;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
 `;
 
 const Error = styled.div`
